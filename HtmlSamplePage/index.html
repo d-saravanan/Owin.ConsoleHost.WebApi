@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Accessing self hosted Web Api</title>
+    <script src="Scripts/jquery-1.10.2.min.js"></script>
+</head>
+<body>
+
+    <div class="ajaxResponse"></div>
+
+    <script type="text/javascript">
+        $.ajax({
+            url: "http://localhost:9000/api/values",
+            method: "get",
+            success: function(result){
+                $(".ajaxResponse").html(result);
+            }
+        })
+    </script>
+
+</body>
+</html>
